@@ -17,31 +17,56 @@
     --navbar-height: 64px;
 }
 
+body {
+    min-height: 100vh;
+    color: var(--text-color);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 24px;
+    padding-top: var(--navbar-height);
+    overflow: hidden;
+    transition: color var(--transition-speed);
+}
+
 body.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #000000;
     --surface-color: #ededed;
     --surface-border: #e5e7eb;
     --link-color: #000000;
     --link-hover-bg: #d7eeee;
 }
 
-.light-mode .icon-img {
-    filter: invert();
-}
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 
-body {
-    min-height: 100vh;
-    background-image: url("../images/sunrise.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--text-color);
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 24px;
-    padding-top: var(--navbar-height);
-    overflow: hidden;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
+    transition: opacity var(--transition-speed);
+}
+
+body::before {
+    background-image: url("../images/sunrise.jpg");
+    opacity: 1;
+}
+
+body::after {
+    background-image: url("../images/fishermen_at_sea.jpg");
+    opacity: 0;
+}
+
+body.light-mode::before {
+    opacity: 0;
+}
+
+body.light-mode::after {
+    opacity: 1;
+}
+
+.light-mode .icon-img {
+    filter: invert();
 }
 
 .navbar {
@@ -125,6 +150,7 @@ body {
 
 .heading {
   text-align: center;
+  text-shadow: 0 3px 14px #000000B3;
   margin-top: 250px;
   font-size: 72px;
 }
