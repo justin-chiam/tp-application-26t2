@@ -40,7 +40,6 @@ body::after {
     position: fixed;
     inset: 0;
     z-index: -1;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,7 +116,7 @@ body.light-mode::after {
     background-color: var(--link-hover-bg);
 }
 
-.github-link {
+.social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -127,17 +126,17 @@ body.light-mode::after {
     transition: background-color var(--transition-speed) ease, color var(--transition-speed);
 }
 
-.github-link:hover {
+.social-link:hover {
     background-color: var(--link-hover-bg);
 }
 
-.github-icon {
+.social-icon {
     width: 22px;
     height: 22px;
     filter: invert();
 }
 
-.light-mode .github-icon {
+.light-mode .social-icon {
     filter: none;
 }
 
@@ -153,6 +152,39 @@ body.light-mode::after {
   text-shadow: 0 3px 14px #000000B3;
   margin-top: 250px;
   font-size: 72px;
+}
+
+.theme-text {
+    transition: opacity var(--transition-speed);
+}
+
+.night-text {
+    display: none;
+}
+
+body.light-mode .day-text {
+    display: none;
+}
+
+body.light-mode .night-text {
+    display: block;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.home-content-paragraph {
+    text-align: center;
+    text-shadow: 0 3px 14px #000000B3;
+    margin-top: 16px;
+    font-size: 30px;
 }
 
 /* Light/dark mode toggle button */
