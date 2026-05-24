@@ -7,10 +7,12 @@
     <link rel="icon" href="./images/icons/icon.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/script.js"></script>
+    <link rel="preload" as="image" href="./images/sunrise.jpg">
+    <link rel="preload" as="image" href="./images/fishermen_at_sea.jpg">
     <title>Projects | Justin Chiam</title>
 </head>
 
-<body>
+<body class="projects-page">
     <nav class="navbar">
         <div class="icon">
             <a href="/">
@@ -41,9 +43,32 @@
     </nav>
 
     <main>
-        <div class="header-row">
-            <h1 class="heading">Projects</h1>
-        </div>
+        <section class="projects-content">
+            <div class="header-row">
+                <h1 class="heading">Projects</h1>
+            </div>
+
+            <section class="project-boxes">
+                <div class="project-box">
+                    <a class="project-github-link" href="https://github.com/justin-chiam/moodle-auto-refresh">
+                        <img class="project-github-icon" src="images/mark-github-24.svg" alt="View source repository">
+                    </a>
+                    <h2>Moodle Auto Refresh</h2>
+                    <br>
+                    <p>A browser extension that automatically keeps your Moodle session alive to prevent being signed out. Built for UNSW Moodle (moodle.telt.unsw.edu.au).</p>
+                    <br>
+                    <p>Works on both Firefox and Chrome.</p>
+                </div>
+                <div class="project-box">
+                    <a class="project-github-link" href="https://github.com/justin-chiam/course-scraper">
+                        <img class="project-github-icon" src="images/mark-github-24.svg" alt="View source repository">
+                    </a>
+                    <h2>Course Scraper</h2>
+                    <br>
+                    <p>A Python web scraping project that helps users explore UNSW courses using the the UNSW timetable and handbook websites. </p>
+                </div>
+            </section>
+        </section>
     </main>
 </body>
 

@@ -9,12 +9,14 @@
 :root {
     --bg-color: #000000;
     --text-color: #ffffff;
+    --heading-color: #ffffff;
     --surface-color: #131313;
     --surface-border: #1a1814;
     --link-color: #ffffff;
     --link-hover-bg: #4c9e9e;
     --transition-speed: 0.4s;
     --navbar-height: 64px;
+    --project-box-bg: #1a1814;
 }
 
 body {
@@ -23,15 +25,16 @@ body {
     font-family: "Inter", Arial, sans-serif;
     font-size: 24px;
     padding-top: var(--navbar-height);
-    overflow: hidden;
     transition: color var(--transition-speed);
 }
 
 body.light-mode {
+    --text-color: #000000;
     --surface-color: #ededed;
     --surface-border: #e5e7eb;
     --link-color: #000000;
     --link-hover-bg: #d7eeee;
+    --project-box-bg: #e5e7eb;
 }
 
 body::before,
@@ -98,6 +101,7 @@ body.light-mode::after {
     display: flex;
     gap: 1em;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .nav-links li {
@@ -148,10 +152,11 @@ body.light-mode::after {
 }
 
 .heading {
-  text-align: center;
-  text-shadow: 0 3px 14px #000000B3;
-  margin-top: 250px;
-  font-size: 72px;
+    color: var(--heading-color);
+    text-align: center;
+    text-shadow: 0 3px 14px #000000B3;
+    margin-top: 250px;
+    font-size: 72px;
 }
 
 .theme-text {
@@ -230,9 +235,65 @@ input:checked + .slider::before {
 }
 
 .slider.round {
-  border-radius: 34px;
+    border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+    border-radius: 50%;
+}
+
+.project-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.project-box {
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    padding: 24px 76px 24px 32px;
+    box-sizing: border-box;
+    color: var(--text-color);
+    text-align: left;
+    border: 2px solid var(--project-box-bg);
+    border-radius: 20px;
+    background-color: var(--project-box-bg);
+    transition:
+        color var(--transition-speed) ease,
+        background-color var(--transition-speed) ease,
+        border-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.project-github-link {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed);
+}
+
+.project-github-link:hover {
+    background-color: var(--link-hover-bg);
+}
+
+.project-github-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert();
+    transition: filter var(--transition-speed) ease;
+}
+
+.light-mode .project-github-icon {
+    filter: none;
 }
