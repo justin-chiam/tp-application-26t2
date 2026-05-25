@@ -252,8 +252,7 @@ input:checked + .slider::before {
     justify-content: center;
     gap: 20px;
     width: 1000px;
-    margin: 0 auto;
-    margin-top: 25px;
+    margin: 25px auto 25px;
 }
 
 .project-box {
