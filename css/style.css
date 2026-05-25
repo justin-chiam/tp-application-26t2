@@ -7,13 +7,16 @@
 }
 
 :root {
-    --bg-color: #000000;
     --text-color: #ffffff;
+    --main-text-color: #ffffff;
     --heading-color: #ffffff;
+    --shadow-color: #000000B3;
     --surface-color: #131313;
     --surface-border: #1a1814;
     --link-color: #ffffff;
     --link-hover-bg: #4c9e9e;
+    --slider-main-color: #ffffff;
+    --slider-secondary-color: #000000;
     --transition-speed: 0.4s;
     --navbar-height: 64px;
     --project-box-bg: #1a1814;
@@ -154,7 +157,7 @@ body.light-mode::after {
 .heading {
     color: var(--heading-color);
     text-align: center;
-    text-shadow: 0 3px 14px #000000B3;
+    text-shadow: 0 3px 14px var(--shadow-color);
     margin-top: 250px;
     font-size: 72px;
 }
@@ -186,8 +189,9 @@ body.light-mode .night-text {
 }
 
 .home-content-paragraph {
+    color: var(--main-text-color);
     text-align: center;
-    text-shadow: 0 3px 14px #000000B3;
+    text-shadow: 0 3px 14px var(--shadow-color);
     margin-top: 16px;
     font-size: 30px;
 }
@@ -210,7 +214,7 @@ body.light-mode .night-text {
     position: absolute;
     inset: 0;
     cursor: pointer;
-    background-color: #000000;
+    background-color: var(--slider-secondary-color);
     transition: background-color var(--transition-speed);
 }
 
@@ -221,17 +225,17 @@ body.light-mode .night-text {
     bottom: 4px;
     width: 26px;
     height:26px;
-    background-color: #ffffff;
+    background-color: var(--slider-main-color);
     transition: transform var(--transition-speed), background-color var(--transition-speed);
 }
 
 input:checked + .slider {
-    background-color: #ffffff;
+    background-color: var(--slider-main-color);
 }
 
 input:checked + .slider::before {
     transform: translateX(26px);
-    background-color: #000000;
+    background-color: var(--slider-secondary-color);
 }
 
 .slider.round {
