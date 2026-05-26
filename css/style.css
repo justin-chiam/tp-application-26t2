@@ -15,8 +15,8 @@
     --surface-border: #1a1814;
     --link-color: #ffffff;
     --link-hover-bg: #4c9e9e;
-    --slider-main-color: #ffffff;
-    --slider-secondary-color: #000000;
+    --slider-main-color: #000000;
+    --slider-secondary-color: #ffffff;
     --transition-speed: 0.4s;
     --navbar-height: 64px;
     --project-box-bg: #1a1814;
@@ -31,7 +31,7 @@ body {
     transition: color var(--transition-speed);
 }
 
-body.light-mode {
+body.night-mode {
     --text-color: #000000;
     --surface-color: #ededed;
     --surface-border: #e5e7eb;
@@ -62,15 +62,15 @@ body::after {
     opacity: 0;
 }
 
-body.light-mode::before {
+body.night-mode::before {
     opacity: 0;
 }
 
-body.light-mode::after {
+body.night-mode::after {
     opacity: 1;
 }
 
-.light-mode .icon-img {
+.night-mode .icon-img {
     filter: invert();
 }
 
@@ -143,7 +143,7 @@ body.light-mode::after {
     filter: invert();
 }
 
-.light-mode .social-icon {
+.night-mode .social-icon {
     filter: none;
 }
 
@@ -166,16 +166,32 @@ body.light-mode::after {
     transition: opacity var(--transition-speed);
 }
 
-.night-text {
+.nav-label {
+    transition: opacity var(--transition-speed);
+}
+
+.projects-content {
+    transition: opacity var(--transition-speed);
+}
+
+.night-view {
     display: none;
 }
 
-body.light-mode .day-text {
+body.night-mode .day-view {
     display: none;
 }
 
-body.light-mode .night-text {
+body.night-mode .night-view {
     display: block;
+}
+
+.nav-links .night-view {
+    display: none;
+}
+
+body.night-mode .nav-links .night-view {
+    display: inline;
 }
 
 .home-content {
@@ -191,12 +207,12 @@ body.light-mode .night-text {
 .home-content-paragraph {
     color: var(--main-text-color);
     text-align: center;
-    text-shadow: 0 3px 14px var(--shadow-color);
+    text-shadow: 0 2px 7px var(--shadow-color);
     margin-top: 16px;
     font-size: 30px;
 }
 
-/* Light/dark mode toggle button */
+/* night/dark mode toggle button */
 .switch {
     position: relative;
     display: inline-block;
@@ -297,6 +313,6 @@ input:checked + .slider::before {
     transition: filter var(--transition-speed) ease;
 }
 
-.light-mode .project-github-icon {
+.night-mode .project-github-icon {
     filter: none;
 }

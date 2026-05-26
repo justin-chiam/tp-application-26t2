@@ -9,7 +9,7 @@
     <script src="js/script.js"></script>
     <link rel="preload" as="image" href="./images/sunrise.jpg">
     <link rel="preload" as="image" href="./images/fishermen_at_sea.jpg">
-    <title>Projects | Justin Chiam</title>
+    <title>Work | Justin Chiam</title>
 </head>
 
 <body class="projects-page">
@@ -23,7 +23,10 @@
         <div class="nav-actions">
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="work.html">
+                    <span class="nav-label day-view">Coursework</span>
+                    <span class="nav-label night-view">Projects</span>
+                </a></li>
                 <li><a href="about.html">About Me</a></li>
             </ul>
 
@@ -36,7 +39,7 @@
             </a>
 
             <label class="switch">
-                <input type="checkbox" onclick="toggleTheme()" checked>
+                <input type="checkbox" onclick="toggleTheme()">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -44,10 +47,31 @@
 
     <main>
         <div class="header-row">
-            <h1 class="heading">Projects</h1>
+            <h1 class="heading day-view">Relevant Coursework</h1>
+            <h1 class="heading night-view">Projects</h1>
         </div>
 
-        <section class="projects-content">
+        <section class="projects-content day-view">
+            <section class="project-boxes">
+                <div class="project-box">
+                    <h2>COMP1511 - Programming Fundamentals</h2>
+                    <br>
+                    <p>Introduction to programming course focused on C.</p>
+                </div>
+                <div class="project-box">
+                    <h2>MATH1081 - Discrete Mathematics</h2>
+                    <br>
+                    <p>qweqweqweqeqwe</p>
+                </div>
+                <div class="project-box">
+                    <h2>MATH1141 - Higher Mathematics 1A</h2>
+                    <br>
+                    <p>qweqewqweqweqweqweqweqweqweqeqweqweq</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="projects-content night-view">
             <section class="project-boxes">
                 <div class="project-box">
                     <a class="project-github-link" href="https://github.com/justin-chiam/moodle-auto-refresh">
