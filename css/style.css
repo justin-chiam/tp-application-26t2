@@ -92,6 +92,7 @@ body.night-mode::after {
     width: 32px;
     height: 32px;
     display: block;
+    transition: filter var(--transition-speed) ease;
 }
 
 .nav-actions {
@@ -141,6 +142,7 @@ body.night-mode::after {
     width: 22px;
     height: 22px;
     filter: invert();
+    transition: filter var(--transition-speed) ease;
 }
 
 .night-mode .social-icon {
