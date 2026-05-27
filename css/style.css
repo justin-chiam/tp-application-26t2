@@ -156,7 +156,7 @@ body.night-mode::after {
     align-items: center;
 }
 
-.heading {
+.headline {
     color: var(--heading-color);
     text-align: center;
     text-shadow: 0 3px 14px var(--shadow-color);
@@ -164,16 +164,12 @@ body.night-mode::after {
     font-size: 72px;
 }
 
-.theme-text {
-    transition: opacity var(--transition-speed);
-}
-
-.nav-label {
-    transition: opacity var(--transition-speed);
-}
-
-.projects-content {
-    transition: opacity var(--transition-speed);
+.heading {
+    color: var(--heading-color);
+    text-align: center;
+    text-shadow: 0 3px 14px var(--shadow-color);
+    margin-top: 72px;
+    font-size: 72px;
 }
 
 .night-view {
@@ -295,6 +291,15 @@ input:checked + .slider::before {
     transform: scale(1.03);
 }
 
+.course-term {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 600;
+}
+
 .project-github-link {
     position: absolute;
     top: 22px;
@@ -321,4 +326,12 @@ input:checked + .slider::before {
 
 .night-mode .project-github-icon {
     filter: none;
+}
+
+.about-boxes {
+    
+}
+
+.about-box {
+
 }
