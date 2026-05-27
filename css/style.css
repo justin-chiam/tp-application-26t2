@@ -329,9 +329,32 @@ input:checked + .slider::before {
 }
 
 .about-boxes {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 1000px;
+    margin: 25px auto 25px;
 }
 
 .about-box {
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    padding: 24px 76px 24px 32px;
+    box-sizing: border-box;
+    color: var(--text-color);
+    text-align: left;
+    border: 2px solid var(--project-box-bg);
+    border-radius: 20px;
+    background-color: var(--project-box-bg);
+    transition:
+        color var(--transition-speed) ease,
+        background-color var(--transition-speed) ease,
+        border-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
 
+.about-box:hover {
+    transform: scale(1.03);
 }
